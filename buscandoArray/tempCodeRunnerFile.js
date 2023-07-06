@@ -1,0 +1,1 @@
+livrosPorAutor(booksByCategory, nomeAutor)
