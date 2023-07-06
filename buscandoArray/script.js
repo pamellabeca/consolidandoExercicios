@@ -69,6 +69,28 @@ function numAutores(booksByCategory){
     console.log("")
 }
 
+function livrosPorAutor(booksByCategory, nomeAutor) {
+    console.log("Livros do autor: " + nomeAutor)
+    for (let i = 0; i < booksByCategory.length; i++) {
+        let livros = booksByCategory[i].books;
 
-numCategoriasELivros(booksByCategory)
-numAutores(booksByCategory)
+        for (let j = 0; j < livros.length; j++) {
+            let autor = livros[j].author;
+
+            if (autor === nomeAutor) {
+                console.log(" # " + livros[j].title);
+            }
+        }
+    }
+    console.log("")
+}
+
+function rodarPrograma(){
+    numCategoriasELivros(booksByCategory)
+    numAutores(booksByCategory)
+    livrosPorAutor(booksByCategory, 'Augusto Cury')
+    livrosPorAutor(booksByCategory, 'Stephen R. Covey')
+    livrosPorAutor(booksByCategory, 'T. Harv Eker')
+}
+
+rodarPrograma()
